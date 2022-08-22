@@ -1,0 +1,15 @@
+on:
+  push:
+    branches: [feat/HP-6]
+    
+name: Print Hello World 
+jobs:
+  latest-version:
+    name: Get Latest Release
+    runs-on: ubuntu-latest #OS
+    environment: dev   #For Environment
+    steps:
+      - uses: actions/checkout@master
+      - name: Consumption of the output
+        run: |
+          echo "hello world"
